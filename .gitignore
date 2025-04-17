@@ -30,6 +30,9 @@
 *.exe
 *.out
 *.app
+ex00/fixed
+ex01/fixed
+ex02/fixed
 
 # CLion files
-../idea/
+./idea/
