@@ -33,6 +33,19 @@ $(BUI_DIR)%.o: $(SRC_DIR)%.cpp | $(OBJF)
 $(OBJF):
 	@touch $(OBJF)
 
+.clangd: Makefile
+	@echo "Making clangd configuration file"
+	@echo -n																\
+	"CompileFlags:\n"														\
+	"  Compiler: clang\n"													\
+	"  Add:\n"																\
+	"    - \"-Wall -Wextra -Werror\"\n"										\
+	"    - \""$(42_FLAGS)"\"\n"	> .clangd
+	@for file in $(INC_DIR); do												\
+		echo "     - \"-I"$(shell pwd)"/"$$file"\"" >> .clangd;				\
+	done ;
+	@echo $(GREEN) "Done" $(RESET)
+
 clean:
 	@echo "Removing build files..."
 	@rm -rf $(BUI_DIR) $(OBJF)
