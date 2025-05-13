@@ -6,12 +6,17 @@
 class Fixed
 {
 	public:
-		Fixed();
-		~Fixed();
-		Fixed(Fixed const &original);
-		Fixed	&operator=(Fixed const &original);
-		int		getRawBits() const;
-		void	setRawBits(int raw);
+		// Constructors
+			Fixed();
+			Fixed(Fixed const &original);
+		// Destructors
+			~Fixed();
+		// Operator overloads
+			Fixed	&operator=(Fixed const &original);
+		// Getters
+			int		getRawBits() const;
+		// Setters
+			void	setRawBits(int raw);
 
 	private:
 		int					_rawBits;

@@ -1,13 +1,9 @@
 #include "Fixed.hpp"
 
+///CONSTRUCTORS/////////////////////////////////////////////////////////////////
 Fixed::Fixed() : _rawBits(0)
 {
 	std::cout << "Default constructor called" << std::endl;
-}
-
-Fixed::~Fixed()
-{
-	std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const &original)
@@ -16,6 +12,13 @@ Fixed::Fixed(Fixed const &original)
 	*this = original;
 }
 
+///DESTRUCTORS//////////////////////////////////////////////////////////////////
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
+///OPERATOR OVERLOADS///////////////////////////////////////////////////////////
 Fixed	&Fixed::operator=(Fixed const &original)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
@@ -24,12 +27,14 @@ Fixed	&Fixed::operator=(Fixed const &original)
 	return (*this);
 }
 
+///GETTERS//////////////////////////////////////////////////////////////////////
 int		Fixed::getRawBits() const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_rawBits);
 }
 
+///SETTERS//////////////////////////////////////////////////////////////////////
 void	Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
