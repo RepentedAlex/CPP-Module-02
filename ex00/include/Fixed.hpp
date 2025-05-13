@@ -3,6 +3,13 @@
 
 #include <iostream>
 
+#define PRINT_42 \
+do \
+{ \
+	std::cout << __PRETTY_FUNCTION__ << "\t called" << std::endl; \
+} \
+while (0)
+
 class Fixed
 {
 	public:
