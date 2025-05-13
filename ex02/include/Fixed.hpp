@@ -5,6 +5,13 @@
 #include <iostream>
 #include <cmath>
 
+#define PRINT_42 \
+do \
+{ \
+	std::cout << __PRETTY_FUNCTION__ << "\t called" << std::endl; \
+} \
+while (0)
+
 #define FRACTIONAL_BITS 8
 
 class Fixed
