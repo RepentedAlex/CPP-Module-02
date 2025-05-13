@@ -26,30 +26,30 @@ class Fixed
 		//Copy
 		Fixed(Fixed const &original);
 		//Operator overloads
-		Fixed			&operator=(Fixed const &original);
-		bool			operator>(Fixed const &fixed) const;
-		bool			operator<(Fixed const &fixed) const;
-		bool			operator>=(Fixed const &fixed) const;
-		bool			operator<=(Fixed const &fixed) const;
-		bool			operator==(Fixed const &fixed) const;
-		bool			operator!=(Fixed const &fixed) const;
-		Fixed			operator+(Fixed const &fixed) const;
-		Fixed			operator-(Fixed const &fixed) const;
-		Fixed			operator*(Fixed const &fixed) const;
-		Fixed			operator/(Fixed const &fixed) const;
-		Fixed			&operator++();
-		Fixed			operator++(int);
-		Fixed			&operator--();
-		Fixed			operator--(int);
+		Fixed				&operator=(Fixed const &original);
+		bool				operator>(Fixed const &fixed) const;
+		bool				operator<(Fixed const &fixed) const;
+		bool				operator>=(Fixed const &fixed) const;
+		bool				operator<=(Fixed const &fixed) const;
+		bool				operator==(Fixed const &fixed) const;
+		bool				operator!=(Fixed const &fixed) const;
+		Fixed				operator+(Fixed const &fixed) const;
+		Fixed				operator-(Fixed const &fixed) const;
+		Fixed				operator*(Fixed const &fixed) const;
+		Fixed				operator/(Fixed const &fixed) const;
+		Fixed				&operator++();
+		Fixed				operator++(int);
+		Fixed				&operator--();
+		Fixed				operator--(int);
 		//Member functions
-		int				getRawBits() const;
-		void			setRawBits(int raw);
-		static const Fixed	&min(Fixed const &f1, Fixed const &f2);
-		static Fixed	&min(Fixed &f1, Fixed &f2);
-		static const Fixed	&max(Fixed const &f1, Fixed const &f2);
-		static Fixed	&max(Fixed &f1, Fixed &f2);
-		float			toFloat() const;
-		int				toInt() const;
+		int					getRawBits() const;
+		void				setRawBits(int raw);
+		static Fixed const	&min(Fixed const &f1, Fixed const &f2);
+		static Fixed		&min(Fixed &f1, Fixed &f2);
+		static Fixed const	&max(Fixed const &f1, Fixed const &f2);
+		static Fixed		&max(Fixed &f1, Fixed &f2);
+		float				toFloat() const;
+		int					toInt() const;
 
 	private:
 		int					_rawBits;
