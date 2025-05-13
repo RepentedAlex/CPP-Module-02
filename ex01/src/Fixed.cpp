@@ -46,6 +46,7 @@ std::ostream	&operator<<(std::ostream& os, Fixed const &fixed)
 	os << fixed.toFloat();
 	return (os);
 }
+
 ///GETTERS//////////////////////////////////////////////////////////////////////
 int		Fixed::getRawBits() const
 {
