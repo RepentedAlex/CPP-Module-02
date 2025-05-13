@@ -36,3 +36,6 @@ ex02/fixed
 
 # CLion files
 .idea/
+
+# .clangd
+.clangd
