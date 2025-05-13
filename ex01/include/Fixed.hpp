@@ -4,26 +4,34 @@
 #include <iostream>
 #include <cmath>
 
+#define PRINT_42 \
+do \
+{ \
+	std::cout << __PRETTY_FUNCTION__ << "\t called" << std::endl; \
+} \
+while (0)
+
 #define FRACTIONAL_BITS 8
 
 class Fixed
 {
 	public:
-		//Constructors
-		Fixed();
-		Fixed(int n);
-		Fixed(float f);
-		//Destructor
-		~Fixed();
-		//Copy
-		Fixed(Fixed const &original);
-		//Operator overloads
-		Fixed			&operator=(Fixed const &original);
-		//Member functions
-		int				getRawBits() const;
-		void			setRawBits(int raw);
-		float			toFloat() const;
-		int				toInt() const;
+		// Constructors
+			Fixed();
+			Fixed(int n);
+			Fixed(float f);
+			Fixed(Fixed const &original);
+		// Destructors
+			~Fixed();
+		// Operator overloads
+			Fixed			&operator=(Fixed const &original);
+		// Getters
+			int				getRawBits() const;
+		// Setters
+			void			setRawBits(int raw);
+		// Member functions
+			float			toFloat() const;
+			int				toInt() const;
 
 	private:
 		int					_rawBits;
