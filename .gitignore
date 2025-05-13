@@ -34,6 +34,9 @@ ex00/fixed
 ex01/fixed
 ex02/fixed
 
+# Temporary files
+.cache_exists
+
 # CLion files
 .idea/
 
