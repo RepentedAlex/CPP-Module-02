@@ -56,8 +56,6 @@ int		Fixed::getRawBits() const
 ///SETTERS//////////////////////////////////////////////////////////////////////
 void	Fixed::setRawBits(int const raw)
 {
-	PRINT_42;
-	std::cout << "setRawBits member function called" << std::endl;
 	this->_rawBits = raw;
 }
 
@@ -69,6 +67,6 @@ float	Fixed::toFloat() const
 
 int		Fixed::toInt() const
 {
-	return ((int)this->_rawBits / (1 << FRACTIONAL_BITS));
+	return ((int)this->_rawBits / (1 << _decimalBit));
 }
 
